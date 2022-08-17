@@ -1,0 +1,16 @@
+1587280031089	Sync.LogManager	DEBUG	Flushing file log
+1587280031090	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1587280031090	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1587280031091	Sync.Service	DEBUG	User-Agent: Firefox/75.0 (Windows NT 10.0; Win64; x64) FxSync/1.77.0.20200403170909.desktop
+1587280031091	Sync.Service	INFO	Starting sync at 2020-04-19 12:37:11 in browser session 86I7fmeTK_Tx
+1587280031091	Sync.Service	DEBUG	In sync: should login.
+1587280031092	Sync.Service	INFO	User logged in successfully - verifying login.
+1587280031092	Sync.BrowserIDManager	DEBUG	unlockAndVerifyAuthState has no FxA user
+1587280031092	Sync.Status	DEBUG	Status.login: error.login.reason.no_username => error.login.reason.no_username
+1587280031092	Sync.Status	DEBUG	Status.service: service.client_not_configured => service.client_not_configured
+1587280031092	Sync.Service	DEBUG	Fetching unlocked auth state returned error.login.reason.no_username
+1587280031092	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1587280031093	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1587280031093	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1587280031095	Sync.Service	DEBUG	Exception calling WrappedLock: Error: Login failed: error.login.reason.no_username(resource://services-sync/service.js:1041:15) JS Stack trace: onNotify@service.js:1041:15
+1587280031095	Sync.Service	DEBUG	Not syncing: login returned false.
