@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Updated on Thu Nov 28 10:39:24 2019
-
-@author: Frank
-
-@modified: Saurabh
-"""
-
 import numpy as np
 import tensorflow as tf
 

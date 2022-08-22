@@ -1,39 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Feb 27 2017
-Author: Weiping Song
-"""
 import numpy as np
 import pandas as pd
 
 
 def evaluate_sessions_batch(model, train_data, test_data, cut_off=20, batch_size=50, session_key='userId', item_key='movieId', time_key='timestamp'):
     
-    '''
-    Evaluates the GRU4Rec network wrt. recommendation accuracy measured by recall@N and MRR@N.
-
-    Parameters
-    --------
-    model : A trained GRU4Rec model.
-    train_data : It contains the transactions of the train set. In evaluation phrase, this is used to build item-to-id map.
-    test_data : It contains the transactions of the test set. It has one column for session IDs, one for item IDs and one for the timestamp of the events (unix timestamps).
-    cut-off : int
-        Cut-off value (i.e. the length of the recommendation list; N for recall@N and MRR@N). Defauld value is 20.
-    batch_size : int
-        Number of events bundled into a batch during evaluation. Speeds up evaluation. If it is set high, the memory consumption increases. Default value is 100.
-    session_key : string
-        Header of the session ID column in the input file (default: 'SessionId')
-    item_key : string
-        Header of the item ID column in the input file (default: 'ItemId')
-    time_key : string
-        Header of the timestamp column in the input file (default: 'Time')
-    
-    Returns
-    --------
-    out : tuple
-        (Recall@N, MRR@N)
-   
-    '''
     model.predict = False
     # Build itemidmap from train data.
     itemids = train_data[item_key].unique()
